@@ -1,6 +1,8 @@
-let header = document.querySelector(".header")
-let toggle = document.querySelector(".toggler")
-let navbar = document.querySelector('.navbar');
+const header = document.querySelector(".header")
+const sections = document.querySelectorAll('section');
+const toggle = document.querySelector(".toggler")
+const navbar = document.querySelector('.navbar');
+const navLinks = document.querySelector('.navbar a');
 
 window.addEventListener('scroll', () => {
 
