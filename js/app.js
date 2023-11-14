@@ -2,7 +2,10 @@ const header = document.querySelector(".header")
 const sections = document.querySelectorAll('section');
 const toggle = document.querySelector(".toggler")
 const navbar = document.querySelector('.navbar');
-const navLinks = document.querySelector('.navbar a');
+const navLinks = document.querySelectorAll('.navbar a');
+const swiperEl = document.querySelector('swiper-container')
+const listFilters = document.querySelectorAll(".filters li");
+const imgFilter = document.querySelectorAll('.portfolio-item');
 
 window.addEventListener('scroll', () => {
 
@@ -45,4 +48,40 @@ toggle.addEventListener('click', () => {
       toggle.classList.add('bi-list');
     }
 });
-  
+
+
+
+    listFilters.forEach(li => {
+        li.addEventListener("click", function() {
+            listFilters.forEach(li => li.classList.remove('active-filter'));
+            li.classList.add('active-filter');
+
+            let value = li.textContent.toLowerCase();
+            imgFilter.forEach(div => {
+                let filterValue = div.getAttribute('data-filter');
+                console.log(div.getAttribute('data-filter'))
+                if (filterValue === value || value === "all") {
+                    div.style.display = 'block';
+                } else {
+                    div.style.display = 'none';
+                }
+            });
+        });
+    });
+
+Object.assign(swiperEl, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+          
+    breakpoints: {
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            },
+        1199: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+            },
+          },
+});
+
