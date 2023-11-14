@@ -116,6 +116,9 @@ section {
   display: none;
   line-height: 0;
   transition: 0.5s;
+  position: absolute;
+  top: 5px;
+  right: 20px;
 }
 
 @media (max-width: 995px) {
@@ -137,12 +140,6 @@ section {
   background: rgba(3, 5, 35, 0.9);
   transition: 0.4s;
   z-index: 101;
-}
-
-.toggler {
-  position: absolute;
-  top: 20px;
-  right: 20px;
 }
 
 .navbar-responsive ul {
@@ -616,10 +613,10 @@ section {
   padding-top: 40px;
 }
 
-.portfolio-details .portfolio-details-slider img {
+/* .portfolio-details .portfolio-details-slider img {
   width: 100%;
-}
-
+} */
+/* 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
@@ -635,7 +632,7 @@ section {
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--orange);
-}
+} */
 
 .portfolio-details .figcaption {
   padding: 30px;
@@ -1035,7 +1032,70 @@ section {
     color: var(--orange);
 }
 
+.details{
+    margin-top: 20px;
+    background: #f7f8f9;
+    height: 120px;
+}
+.details h2{
+    font-size: 30px;
+    font-weight: 400;
+    margin:0 ;
+}
+.details a{
+    text-decoration: none;
+    color: var(--orange);
+}
+.details a:hover{
+    color: #ea9558;
+}
+.details span{
+    margin: 0 6px;
+}
+.details p{
+    margin: 0;
+}
 
 
+@media (max-width: 992px) {
+  .breadcrumbs ol {
+    margin-top: 10px;
+  }
+}
 
 
+@media (max-width: 768px) {
+  .details .d-flex {
+    display: block !important;
+  }
+  .details p{
+    padding-top: 10px;
+  }
+  .details h2{
+    margin-top: -10px;
+  }
+
+}
+
+.project-info{
+    padding: 40px;
+    box-shadow:0px 0px 30px rgba(127, 137, 161, 0.25) ;
+    border-radius: 10px;
+}
+.project-info h3{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.project-info ul{
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    line-height: 2;
+}
+.project-info a{
+    text-decoration: none;
+    color: var(--orange);
+}

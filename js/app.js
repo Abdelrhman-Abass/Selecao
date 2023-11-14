@@ -3,7 +3,7 @@ const sections = document.querySelectorAll('section');
 const toggle = document.querySelector(".toggler")
 const navbar = document.querySelector('.navbar');
 const navLinks = document.querySelectorAll('.navbar a');
-const swiperEl = document.querySelector('swiper-container')
+const swiperEl = document.querySelector('#testimonials swiper-container')
 const listFilters = document.querySelectorAll(".filters li");
 const imgFilter = document.querySelectorAll('.portfolio-item');
 
@@ -59,7 +59,7 @@ toggle.addEventListener('click', () => {
             let value = li.textContent.toLowerCase();
             imgFilter.forEach(div => {
                 let filterValue = div.getAttribute('data-filter');
-                console.log(div.getAttribute('data-filter'))
+                
                 if (filterValue === value || value === "all") {
                     div.style.display = 'block';
                 } else {
@@ -82,6 +82,6 @@ Object.assign(swiperEl, {
             slidesPerView: 3,
             spaceBetween: 50,
             },
-          },
+    },
 });
 
