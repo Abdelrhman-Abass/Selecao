@@ -3,39 +3,46 @@ const sections = document.querySelectorAll('section');
 const toggle = document.querySelector(".toggler")
 const navbar = document.querySelector('.navbar');
 const navLinks = document.querySelectorAll('.navbar a');
-const swiperEl = document.querySelector('#testimonials swiper-container')
+
 const listFilters = document.querySelectorAll(".filters li");
 const imgFilter = document.querySelectorAll('.portfolio-item');
 
+const backToTop = document.querySelector(".back-to-top")
+      
 
 
-console.log(window.href)
-window.addEventListener('scroll', () => {
 
-    // Change the color of the navbar if the user has scrolled down the page
-    header.classList.toggle('scrolled', window.scrollY > 0);
 
-    // Back to top Button
-   
-    
-    
-    // Highlight the active navigation link
-    sections.forEach(section => {
-      const top = window.scrollY;
-      const offset = section.offsetTop - 150;
-      const height = section.offsetHeight;
-      const id = section.getAttribute('id');
+if (!window.location.href.includes("project-details")){
+    window.addEventListener('scroll', () => {
+
+        // Change the color of the navbar if the user has scrolled down the page
+        header.classList.toggle('scrolled', window.scrollY > 0);   
         
-      if (top >= offset && top < offset + height) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.href.includes(id)) {
-            link.classList.add('active');
+        
+        // Highlight the active navigation link
+        sections.forEach(section => {
+          const top = window.scrollY;
+          const offset = section.offsetTop - 150;
+          const height = section.offsetHeight;
+          const id = section.getAttribute('id');
+            
+          if (top >= offset && top < offset + height) {
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.href.includes(id)) {
+                link.classList.add('active');
+              }
+            });
           }
         });
-      }
     });
-});
+    
+}
+
+// Back to top
+window.addEventListener("scroll", function () {
+    backToTop.classList.toggle('btn-active', window.scrollY > 100)});
 
 toggle.addEventListener('click', () => {
     // Add the navbar-mobile class to the navbar element.
