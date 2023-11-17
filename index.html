@@ -16,8 +16,13 @@
 
     <!-- Bootstrap icons  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="css/style.css" rel="stylesheet">
+    <link href="./css/lightbox.css" rel="stylesheet">
+
 
     <!-- Animation Scroll AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -119,6 +124,8 @@
         </svg>
     
       </section>
+
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
       <!-- About section -->
 
@@ -361,14 +368,14 @@
       </section>
 
       <!-- Portfolio Section  -->
-      <section id="portfolio" class="portfolio">
+      <section id="portfolio">
         <div class="container">
             <div class="title" data-aos="zoom-out">
                 <h4 class="text-body-tertiary fs-6 fw-bolder lh-sm p-0 mb-1 text-uppercase">Portfolio</h4>
                 <p class="fs-1 mb-5 p-0 fw-bold text-uppercase">What we've done</p>
             </div>
   
-            <div class="part col-sm-12">
+            <div class="col-sm-12">
                 <ul class="filters d-flex justify-content-end" data-aos="fade-up">
                   <li data-filter="*" class="active-filter">All</li>
                   <li data-filter="app-filter">App</li>
@@ -376,14 +383,15 @@
                   <li data-filter="web-filter">Web</li>
                 </ul>
               </div>
-  
-          <div class="col-sm-12" id="project-gallery">
-            <div class="row portfolioContainer">
+              
+          <div class="col-sm-12">
+            
+            <div class="row">
 
-              <div data-filter="app" class="col-lg-4 col-md-6 portfolio-item app-filter">
+              <div data-filter="app" data-aos="fade-left" class="col-lg-4 col-md-6 portfolio-item app-filter">
                 <figure>
                   <div class="portfolio-img">
-                    <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid"/>
+                    <img src="assets/img/portfolio/portfolio-1.jpg" class="rounded img-fluid"/>
                   </div>
                   
                   <figcaption class="figcaption">
@@ -393,7 +401,7 @@
                     </div>
                     
                     <div class="links">
-                      <a href="assets/img/portfolio/portfolio-1.jpg" class="preview-link" title="App 1"><i class="bi bi-plus"></i></a>
+                      <a href="assets/img/portfolio/portfolio-1.jpg" class="preview-link img-fluid" title="App 1" data-toggle="lightbox" data-gallery="photo-gallery"><i class="bi bi-plus"></i></a>
                 
                       <a href="project-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
                     </div>
@@ -401,11 +409,10 @@
                   </figcaption>
                 </figure>
               </div>
-
               <div data-filter="web" class="col-lg-4 col-md-6 portfolio-item app-filter">
                 <figure>
                   <div class="portfolio-img">
-                    <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid"/>
+                    <img src="assets/img/portfolio/portfolio-2.jpg" class="rounded img-fluid"/>
                   </div>
                   
                   <figcaption class="figcaption">
@@ -415,7 +422,7 @@
                     </div>
                     
                     <div class="links">
-                      <a href="assets/img/portfolio/portfolio-1.jpg" class="preview-link" title="App 1"><i class="bi bi-plus"></i></a>
+                      <a href="assets/img/portfolio/portfolio-2.jpg" class="preview-link img-fluid" title="App 2" data-toggle="lightbox" data-gallery="photo-gallery"><i class="bi bi-plus"></i></a>
                 
                       <a href="project-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
                     </div>
@@ -423,11 +430,10 @@
                   </figcaption>
                 </figure>
               </div>
-
-              <div data-filter="app" class="col-lg-4 col-md-6 portfolio-item app-filter">
+              <div data-filter="app" data-aos="fade-left" class="col-lg-4 col-md-6 portfolio-item app-filter">
                 <figure>
                   <div class="portfolio-img">
-                    <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid"/>
+                    <img src="assets/img/portfolio/portfolio-3.jpg" class="rounded img-fluid" />
                   </div>
                   
                   <figcaption class="figcaption">
@@ -437,7 +443,7 @@
                     </div>
                     
                     <div class="links">
-                      <a href="assets/img/portfolio/portfolio-1.jpg" class="preview-link" title="App 1"><i class="bi bi-plus"></i></a>
+                      <a href="assets/img/portfolio/portfolio-3.jpg" class="preview-link img-fluid py-2 img-fluid" data-toggle="lightbox" data-gallery="photo-gallery"title="App 1"><i class="bi bi-plus"></i></a>
                 
                       <a href="project-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
                     </div>
@@ -445,11 +451,10 @@
                   </figcaption>
                 </figure>
               </div>
-
-              <div data-filter="card" class="col-lg-4 col-md-6 portfolio-item app-filter">
+              <div data-filter="card" data-aos="fade-left" class="col-lg-4 col-md-6 portfolio-item app-filter">
                 <figure>
                   <div class="portfolio-img">
-                    <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid"/>
+                    <img src="assets/img/portfolio/portfolio-4.jpg" class="rounded img-fluid"/>
                   </div>
                   
                   <figcaption class="figcaption">
@@ -459,7 +464,7 @@
                     </div>
                     
                     <div class="links">
-                      <a href="assets/img/portfolio/portfolio-1.jpg" class="preview-link" title="App 1"><i class="bi bi-plus"></i></a>
+                      <a href="assets/img/portfolio/portfolio-4.jpg" class="preview-link img-fluid" data-toggle="lightbox" data-gallery="photo-gallery" data-title="App4" title="App 1"><i class="bi bi-plus"></i></a>
                 
                       <a href="project-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
                     </div>
@@ -467,11 +472,10 @@
                   </figcaption>
                 </figure>
               </div>
-
-              <div data-filter="web" class="col-lg-4 col-md-6 portfolio-item app-filter">
+              <div data-filter="web" data-aos="fade-left" class="col-lg-4 col-md-6 portfolio-item app-filter">
                 <figure>
                   <div class="portfolio-img">
-                    <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid"/>
+                    <img src="assets/img/portfolio/portfolio-5.jpg" class="rounded img-fluid"/>
                   </div>
                   
                   <figcaption class="figcaption">
@@ -481,7 +485,7 @@
                     </div>
                     
                     <div class="links">
-                      <a href="assets/img/portfolio/portfolio-1.jpg" class="preview-link" title="App 1"><i class="bi bi-plus"></i></a>
+                      <a href="assets/img/portfolio/portfolio-5.jpg" class="preview-link img-fluid"  data-toggle="lightbox" data-gallery="photo-gallery" data-title="App5" title="App 1"><i class="bi bi-plus"></i></a>
                 
                       <a href="project-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
                     </div>
@@ -489,7 +493,90 @@
                   </figcaption>
                 </figure>
               </div>
-
+              <div data-filter="app" data-aos="fade-left" class="col-lg-4 col-md-6 portfolio-item app-filter">
+                <figure>
+                  <div class="portfolio-img">
+                    <img src="assets/img/portfolio/portfolio-6.jpg" class="rounded img-fluid"/>
+                  </div>
+                  
+                  <figcaption class="figcaption">
+                    <div class="info">
+                      <hs class="fig-title">App 1</hs>
+                      <span class="sub-fig-title">App</span>
+                    </div>
+                    
+                    <div class="links">
+                      <a href="assets/img/portfolio/portfolio-6.jpg" class="preview-link img-fluid" data-toggle="lightbox" data-gallery="photo-gallery" data-title="App6" title="App 1"><i class="bi bi-plus"></i></a>
+                
+                      <a href="project-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
+                    </div>
+                    
+                  </figcaption>
+                </figure>
+              </div>
+              <div data-filter="card" data-aos="fade-left" class="col-lg-4 col-md-6 portfolio-item app-filter">
+                <figure>
+                  <div class="portfolio-img">
+                    <img src="assets/img/portfolio/portfolio-7.jpg" class="rounded img-fluid"/>
+                  </div>
+                  
+                  <figcaption class="figcaption">
+                    <div class="info">
+                      <hs class="fig-title">App 1</hs>
+                      <span class="sub-fig-title">App</span>
+                    </div>
+                    
+                    <div class="links">
+                      <a href="assets/img/portfolio/portfolio-7.jpg" class="preview-link img-fluid" data-toggle="lightbox" data-gallery="photo-gallery" data-title="App7" title="App 1"><i class="bi bi-plus"></i></a>
+                
+                      <a href="project-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
+                    </div>
+                    
+                  </figcaption>
+                </figure>
+              </div>
+              <div data-filter="card" data-aos="fade-left" class="col-lg-4 col-md-6 portfolio-item app-filter">
+                <figure>
+                  <div class="portfolio-img">
+                    <img src="assets/img/portfolio/portfolio-8.jpg" class="rounded img-fluid"/>
+                  </div>
+                  
+                  <figcaption class="figcaption">
+                    <div class="info">
+                      <hs class="fig-title">App 1</hs>
+                      <span class="sub-fig-title">App</span>
+                    </div>
+                    
+                    <div class="links">
+                      <a href="assets/img/portfolio/portfolio-8.jpg" class="preview-link img-fluid" data-toggle="lightbox" data-gallery="photo-gallery" data-title="App8" title="App 1"><i class="bi bi-plus"></i></a>
+                
+                      <a href="project-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
+                    </div>
+                    
+                  </figcaption>
+                </figure>
+              </div>
+              <div data-filter="web" data-aos="fade-left" class="col-lg-4 col-md-6 portfolio-item app-filter">
+                <figure>
+                  <div class="portfolio-img">
+                    <img src="assets/img/portfolio/portfolio-9.jpg" class="rounded img-fluid"/>
+                  </div>
+                  
+                  <figcaption class="figcaption">
+                    <div class="info">
+                      <hs class="fig-title">App 1</hs>
+                      <span class="sub-fig-title">App</span>
+                    </div>
+                    
+                    <div class="links">
+                      <a href="assets/img/portfolio/portfolio-9.jpg" class="preview-link img-fluid" data-toggle="lightbox" data-gallery="photo-gallery"  data-title="App9" title="App 1"><i class="bi bi-plus"></i></a>
+                
+                      <a href="project-details.html" class="details-link" title="More Details"><i class="bi bi-link-45deg"></i></a>
+                    </div>
+                    
+                  </figcaption>
+                </figure>
+              </div>
           </div>
         </div>
   
@@ -497,92 +584,67 @@
       </section> 
 
       <!-- Testimonial Section  -->
-      <section id="testimonials" class="testimonials">
+      <section id="testimonials">
       <div class="container">
         <div class="title"  data-aos="zoom-out">
             <h4 class="text-body-tertiary fs-6 fw-bolder lh-sm p-0 mb-1 text-uppercase">Testimonials</h4>
             <p class="fs-1 mb-5 p-0 fw-bold text-uppercase">What they are saying about us</p>
         </div>
 
-        <swiper-container class="mySwiper" 
-        centered-slides="true" autoplay-delay="4000" autoplay-disable-on-interaction="false" 
-        loop="true">
-            <swiper-slide data-aos="fade-up" data-aos-delay="100"> 
-                <div class="swiper-slide">
-                    <div class="testimonial-item">
-                        <p>
-                            <i class="bi bi-quote quote-icon"></i>
-                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                            <i class="bi bi-quote quote-icon"></i>
-                        </p>
-                        <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                        <h3>Saul Goodman</h3>
-                        <h4>Ceo &amp; Founder</h4>
-                    </div>
-                </div>
-            </swiper-slide>
+        <div class="gx-5 slicky-carousal">
+            <div class="testimonial-item "data-aos="fade-up" >
+              <p>
+                  <i class="bi bi-quote quote-icon"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bi bi-quote quote-icon"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>Ceo &amp; Founder</h4>
+          </div>
 
-            <swiper-slide swiper-slide data-aos="fade-up" data-aos-delay="200"> 
-                <div class="swiper-slide">
-                    <div class="testimonial-item">
-                        <p>
-                            <i class="bi bi-quote quote-icon"></i>
-                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                            <i class="bi bi-quote quote-icon"></i>
-                        </p>
-                        <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                        <h3>Sara Wilsson</h3>
-                        <h4>Designer</h4>
-                    </div>
-                </div>
-            </swiper-slide>
-
-            <swiper-slide swiper-slide data-aos="fade-up" data-aos-delay="300"> 
-                <div class="swiper-slide">
-                    <div class="testimonial-item">
-                        <p>
-                            <i class="bi bi-quote quote-icon"></i>
-                            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                            <i class="bi bi-quote quote-icon"></i>
-                            </p>
-                            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                            <h3>Jena Karlis</h3>
-                            <h4>Store Owner</h4>
-                    </div>
-                </div>
-            </swiper-slide>
-
-            <swiper-slide swiper-slide data-aos="fade-up" data-aos-delay="400"> 
-                <div class="swiper-slide">
-                    <div class="testimonial-item">
-                        <p>
-                            <i class="bi bi-quote quote-icon"></i>
-                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                            <i class="bi bi-quote quote-icon"></i>
-                            </p>
-                            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                            <h3>Matt Brandon</h3>
-                            <h4>Freelancer</h4>
-                    </div>
-                </div>
-            </swiper-slide>
-
-            <swiper-slide swiper-slide data-aos="fade-up" data-aos-delay="450"> 
-                <div class="swiper-slide">
-                    <div class="testimonial-item">
-                        <p>
-                            <i class="bi bi-quote quote-icon"></i>
-                            Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                            <i class="bi bi-quote quote-icon"></i>
-                        </p>
-                        <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                        <h3>John Larson</h3>
-                        <h4>Entrepreneur</h4>
-                    </div>
-                </div>
-            </swiper-slide>
-        
-      </swiper-container>
+          
+            <div class="testimonial-item "data-aos="fade-up" data-aos-delay="100">
+              <p>
+                  <i class="bi bi-quote quote-icon"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bi bi-quote quote-icon"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>Ceo &amp; Founder</h4>
+          </div>
+            <div class="testimonial-item "data-aos="fade-up" data-aos-delay="200">
+              <p>
+                  <i class="bi bi-quote quote-icon"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bi bi-quote quote-icon"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>Ceo &amp; Founder</h4>
+          </div>
+            <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+              <p>
+                  <i class="bi bi-quote quote-icon"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bi bi-quote quote-icon"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>Ceo &amp; Founder</h4>
+          </div>
+            <div class="testimonial-item "data-aos="fade-up" data-aos-delay="400">
+              <p>
+                  <i class="bi bi-quote quote-icon"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bi bi-quote quote-icon"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>Ceo &amp; Founder</h4>
+          </div>
+          </div>
       </section>
 
       <!-- Pricing Section  -->
@@ -911,17 +973,49 @@
 
     <!-- Bootstrap CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      $('.slicky-carousal').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 900,
+        infinite: true,
+        speed: 600,
+
+        responsive: [
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]        
+      });
+    </script>
+
     <script src="./js/app.js"></script>
-    
+
     <!-- Animation Scroll AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
       </script>
 
-    <!-- Swiper js for testimonials section -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    
 
     
 

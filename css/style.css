@@ -160,6 +160,7 @@ section {
   padding: 10px 20px;
   margin: 5px;
   font-size: 15px;
+  text-decoration: none;
   color: var(--blue);
 }
 
@@ -366,6 +367,7 @@ section {
   padding: 15px;
   transition: 0.4s;
   color: var(--blue);
+  height: 100%;
   border-radius: 0;
   display: flex;
   align-items: center;
@@ -546,12 +548,31 @@ section {
 .filters li.active-filter::after {
   color: var(--orange);
 }
+.slick-dots li {
+    width: 15px;
+    height: 15px;
+}
+.slick-dots li button {
+    height: 10px;
+    width: 10px;
+    border: 1px solid var(--orange);
+    border-radius: 50%;
+}
+.slick-dots li button:before{
+    color: transparent !important;
+}
+
+.slick-dots li.slick-active button{
+    background: var(--orange) !important;
+}
+.slick-prev, .slick-next {
+    display: none;
+}
 
 .portfolio-item {
-  margin-bottom: 30px;
   transition: all ease-in-out 0.4s;
-
 }
+
 
 .portfolio-item .portfolio-img {
   overflow: hidden;
@@ -583,6 +604,10 @@ section {
   font-size: 14px;
   margin-bottom: 0;
 }
+.info{
+    display: flex;
+    flex-direction:column ;
+}
 
 .preview-link,
 .details-link {
@@ -597,6 +622,10 @@ section {
 .details-link:hover {
   color: #fd9f5b;
 }
+.portfolio-img img{
+    height: 260px;
+    width: 100%;
+}
 
 .portfolio-item:hover .portfolio-img img {
   transform: scale(1.2);
@@ -606,91 +635,17 @@ section {
   opacity: 1;
 }
 
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
-}
-
-/* .portfolio-details .portfolio-details-slider img {
-  width: 100%;
-} */
-/* 
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid var(--orange);
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--orange);
-} */
-
-.portfolio-details .figcaption {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(42, 44, 57, 0.08);
-}
-
-.portfolio-details .figcaption h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li+li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0;
-}
-
-.grid-item figure{
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-
-}
-.grid-item figure img{
-    position: relative;
-    width: 100%;
-    display: block;
-}
 
 /* Testimonials Section  */
 
 .testimonial-item {
   padding: 30px 30px 0 30px;
-  margin: 30px 15px;
+  margin: 30px 30px;
+  /* display: block;
+  width: 50%; */
   text-align: center;
   min-height: 350px;
-  box-shadow: 0px 2px 20px 5px rgba(46, 60, 101, 0.1);
+  box-shadow: 0px 2px 10px 5px rgba(46, 60, 101, 0.1);
 }
 
 .testimonial-img {
@@ -712,7 +667,9 @@ section {
   color: #999;
   margin: 0;
 }
-
+.slick-slide{
+    padding: 30px;
+}
 .quote-icon {
   color: #f1dac9;
   font-size: 26px;
@@ -1099,3 +1056,38 @@ section {
     text-decoration: none;
     color: var(--orange);
 }
+
+
+/* Back to top button  */
+.back-to-top {
+  position: fixed;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 10001;
+  background: var(--orange);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #fc7c1f;
+  color: #fff;
+}
+
+.btn-active {
+  opacity: 1;
+}
+
+.ratio::before{
+    margin-bottom: 50px;
+}
+
